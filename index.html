@@ -6,7 +6,7 @@
   <title>Aprende Taekwondo, Hapkido y Kumdo en Xalapa con maestros certificados por Kukkiwon y federaciones internacionales. Clases para niños, jóvenes y adultos.</title>
   <meta name="description" content="Aprende Taekwondo, Hapkido y Kumdo en Xalapa con maestros certificados por Kukkiwon y federaciones internacionales. Clases para niños, jóvenes y adultos.">
   <meta name="keywords" content="taekwondo xalapa, hapkido xalapa, kumdo xalapa, artes marciales xalapa, kukkiwon, clases taekwondo veracruz, escuela artes marciales xalapa, supremacía marcial, taekwondo niños xalapa, hapkido veracruz">
-  <meta name="author" content="SUPREMACÍA MARCIAL TAEKKWONDO Y HAPKIDO">
+  <meta name="author" content="SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#050506">
   <meta property="og:title" content="Aprende Taekwondo, Hapkido y Kumdo en Xalapa con maestros certificados por Kukkiwon y federaciones internacionales. Clases para niños, jóvenes y adultos.">
@@ -1257,8 +1257,47 @@ main section[id] {
 }
 
 .why-us,
-.gallery {
+.gallery,
+.convenios {
   background: var(--ink-2);
+}
+
+/* =========================================================
+   CONVENIOS
+   ========================================================= */
+.convenios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.convenio-item {
+  display: grid;
+  place-items: center;
+  height: 92px;
+  padding: 14px 26px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.convenio-item img {
+  max-width: 130px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.convenio-item--text {
+  background: var(--wash-1);
+  color: var(--muted);
+  font-family: var(--hw-acento);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .services {
@@ -1503,6 +1542,31 @@ main section[id] {
 
 .service-list li:hover::before {
   transform: rotate(135deg) scale(1.15);
+}
+
+.escudos-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.escudo-item {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 5px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--r-sm);
+  background: rgba(255, 255, 255, 0.92);
+  flex-shrink: 0;
+}
+
+.escudo-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .services-cta {
@@ -2008,7 +2072,7 @@ main section[id] {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.7fr 1fr;
+  grid-template-columns: 1.6fr 1fr;
   gap: clamp(28px, 4vw, 48px);
   padding-bottom: clamp(40px, 5vw, 58px);
 }
@@ -3172,10 +3236,10 @@ main section[id] {
   
 <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="#inicio" class="brand" aria-label="SUPREMACÍA MARCIAL TAEKKWONDO Y HAPKIDO">
-        <span class="brand-mark"><img src="img/logo-lobo.png" alt="SUPREMACÍA MARCIAL TAEKKWONDO Y HAPKIDO" class="brand-logo"></span>
+      <a href="#inicio" class="brand" aria-label="SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO">
+        <span class="brand-mark"><img src="img/logo-lobo.png" alt="SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO" class="brand-logo"></span>
         <span class="brand-text">
-          <span class="brand-name">SUPREMACÍA MARCIAL TAEKKWONDO, HAPKIDO Y KUMDO</span>
+          <span class="brand-name">SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO</span>
           <span class="brand-tagline">Artes marciales coreanas en Xalapa, Veracruz, México</span>
         </span>
       </a>
@@ -3184,7 +3248,8 @@ main section[id] {
           <li><a href="#inicio" class="nav-link"><span class="nav-link-index">01</span><span class="nav-link-text">Inicio</span></a></li>
           <li><a href="#servicios" class="nav-link"><span class="nav-link-index">02</span><span class="nav-link-text">Disciplinas</span></a></li>
           <li><a href="#galeria" class="nav-link"><span class="nav-link-index">03</span><span class="nav-link-text">Galería</span></a></li>
-          <li><a href="#contacto" class="nav-link"><span class="nav-link-index">04</span><span class="nav-link-text">Contacto</span></a></li>
+          <li><a href="#convenios" class="nav-link"><span class="nav-link-index">04</span><span class="nav-link-text">Convenios</span></a></li>
+          <li><a href="#contacto" class="nav-link"><span class="nav-link-index">05</span><span class="nav-link-text">Contacto</span></a></li>
         </ul>
         <button type="button" class="btn btn-primary btn-nav" data-wa-trigger><span>Agenda tu clase gratis</span></button>
       </nav>
@@ -3213,7 +3278,7 @@ main section[id] {
           <span class="hero-typewriter-label">Entrenamos:</span>
           <span class="typewriter-word" id="typewriter"></span><span class="typewriter-cursor" aria-hidden="true"></span>
         </p>
-        <p class="hero-desc" data-hero="5">En Supremacía Marcial te enseñamos Taekwondo, Hapkido y Kumdo con instructores certificados internacionalmente. Para niños, jóvenes y adultos que quieren crecer con disciplina real.</p>
+        <p class="hero-desc" data-hero="5">En Supremacía Marcial entrenas con maestros respaldados por las máximas autoridades del Taekwondo, Hapkido y Kumdo a nivel mundial. Para niños, jóvenes y adultos que quieren crecer con disciplina real.</p>
         <div class="hero-cta" data-hero="6">
           <button type="button" class="btn btn-primary btn-lg" data-wa-trigger>
             <svg viewBox="0 0 24 24" class="btn-icon" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8a8.1 8.1 0 0 1 5.75 2.38 8.07 8.07 0 0 1 2.38 5.73c0 4.48-3.65 8.12-8.14 8.12a8.1 8.1 0 0 1-4.13-1.13l-.3-.17-3.12.82.83-3.04-.19-.31a8.06 8.06 0 0 1-1.24-4.31c0-4.48 3.65-8.09 8.16-8.09m-4.48 4.19c-.15 0-.4.06-.6.28-.21.23-.8.77-.8 1.89s.82 2.2.93 2.35c.11.15 1.6 2.5 3.95 3.44 1.94.79 2.35.63 2.77.6.42-.04 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.06-.09-.21-.15-.44-.26-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.11-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.96-.35-1.83-1.13-.68-.6-1.13-1.35-1.27-1.58-.13-.23-.01-.35.1-.47.11-.11.23-.27.35-.4.11-.14.15-.24.23-.4.08-.15.04-.3-.02-.42-.06-.11-.52-1.28-.72-1.74-.19-.46-.38-.4-.52-.4Z"/></svg>
@@ -3231,7 +3296,7 @@ main section[id] {
           </div>
           <div class="hero-meta-item">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.9-13H11v6l5.2 3.1.9-1.5-4.2-2.5Z"/></svg>
-            <span>Lunes a sábado, 9:00 a 19:00</span>
+            <span>Horarios por edad y disciplina abajo</span>
           </div>
           <div class="hero-meta-item hero-meta-item--social">
             <span class="hero-social-label">Síguenos en redes</span>
@@ -3273,11 +3338,16 @@ main section[id] {
               <p class="service-desc" data-reveal>Entrenamiento técnico y competitivo de Taekwondo dirigido por un Máster Internacional certificado por Kukkiwon. Ideal para niños, jóvenes y adultos que buscan formación marcial seria con respaldo internacional.</p>
               <ul class="service-list">
                 <li data-reveal>Certificación Kukkiwon reconocida mundialmente</li>
-                <li data-reveal>Instructor con grado 6o Dan World Police TKD</li>
+                <li data-reveal>Instructor con grado 6.º Dan World Police Taekwondo Federation</li>
                 <li data-reveal>Formación técnica y competitiva en paralelo</li>
                 <li data-reveal>Clases estructuradas por nivel y edad</li>
                 <li data-reveal>Convenio con SEV en proyecto Escuelas de Vida Saludable</li>
               </ul>
+              <div class="escudos-row" data-reveal>
+                <span class="escudo-item"><img src="img/escudo-kms.png" alt="Kukkiwon Membership System"></span>
+                <span class="escudo-item"><img src="img/escudo-police.png" alt="World Police Taekwondo Federation"></span>
+                <span class="escudo-item"><img src="img/escudo-femedees.png" alt="FEMEDEES - Federación Mexicana de Deporte Escolar"></span>
+              </div>
             </div>
           </article>
 
@@ -3299,6 +3369,9 @@ main section[id] {
                 <li data-reveal>Respaldo de federación internacional activa</li>
                 <li data-reveal>Mismo maestro que dirige la delegación estatal</li>
               </ul>
+              <div class="escudos-row" data-reveal>
+                <span class="escudo-item"><img src="img/escudo-hwarangdo.jpg" alt="World Hwarangdo Diamond Federation"></span>
+              </div>
             </div>
           </article>
 
@@ -3312,11 +3385,10 @@ main section[id] {
                 <span class="tag">Arte marcial con arma</span>
               </div>
               <h3 class="service-title" data-reveal>Kumdo: la disciplina del sable coreano</h3>
-              <p class="service-desc" data-reveal>El Kumdo forma concentración, postura y precisión a través del manejo del sable coreano. Certificado por la World Kumdo Martial Arts Federation. Complementa y profundiza la formación marcial integral.</p>
+              <p class="service-desc" data-reveal>El Kumdo forma concentración, postura y precisión a través del manejo del sable coreano. Certificado por la World Kumdo Martial Arts Federation, complementa y profundiza la formación marcial integral.</p>
               <ul class="service-list">
                 <li data-reveal>Instructor certificado por World Kumdo Martial Arts Federation</li>
                 <li data-reveal>Disciplina que desarrolla concentración y precisión</li>
-                <li data-reveal>Única escuela con las tres artes coreanas en Xalapa</li>
                 <li data-reveal>Formación marcial integral junto a TKD y Hapkido</li>
               </ul>
             </div>
@@ -3324,6 +3396,7 @@ main section[id] {
         </div>
 
         <div class="services-cta" data-reveal>
+          <!-- PENDIENTE: al cliente no le convence este texto, reemplazar cuando envíe la redacción definitiva -->
           <p>Si buscas una escuela seria con maestros de respaldo internacional, este es el lugar. Conoce cómo empezar tu entrenamiento en Supremacía Marcial.</p>
           <button type="button" class="btn btn-primary" data-wa-trigger><span>Quiero comenzar</span></button>
         </div>
@@ -3343,7 +3416,7 @@ main section[id] {
       <div class="container">
         <div class="section-head section-head--center">
           <div class="section-head-main">
-            <p class="eyebrow" data-reveal>Por qué con nosotros</p>
+            <p class="eyebrow" data-reveal>¿Por qué elegirnos?</p>
             <h2 class="section-title" data-reveal>Certificación real, instrucción que se nota</h2>
           </div>
         </div>
@@ -3359,7 +3432,7 @@ main section[id] {
             </span>
             <div class="timeline-card">
               <h3>Maestros certificados internacionalmente</h3>
-              <p>El instructor principal cuenta con certificaciones de Kukkiwon, World Police Taekwondo Federation y federaciones internacionales de Hapkido y Kumdo.</p>
+              <p>El maestro titular de la escuela cuenta con certificaciones de Kukkiwon, World Police Taekwondo Federation, World Hapkido Martial Arts Federation y World Kumdo Martial Arts Federation.</p>
             </div>
           </li>
 
@@ -3370,7 +3443,7 @@ main section[id] {
             </span>
             <div class="timeline-card">
               <h3>Tres disciplinas en una sola escuela</h3>
-              <p>Taekwondo, Hapkido y Kumdo bajo el mismo techo. Puedes especializarte en una o complementar tu formación con las tres, según tu edad y tus metas.</p>
+              <p>Taekwondo, Hapkido y Kumdo bajo el mismo techo. Puedes especializarte en una o complementar tu formación con las tres, según tu edad y tus metas. Somos la única escuela con las tres artes coreanas en Xalapa.</p>
             </div>
           </li>
 
@@ -3381,7 +3454,7 @@ main section[id] {
             </span>
             <div class="timeline-card">
               <h3>Grupos por edad y nivel real</h3>
-              <p>Niños, jóvenes y adultos entrenan en grupos separados y con metodología distinta.</p>
+              <p>Niños, jóvenes y adultos entrenan en grupos separados y con metodología específica para su edad.</p>
             </div>
           </li>
 
@@ -3392,7 +3465,7 @@ main section[id] {
             </span>
             <div class="timeline-card">
               <h3>Convenios con empresas e instituciones</h3>
-              <p>Alumnos y trabajadores de Fasti, ZERO, Universidad Filadelfia y otras instituciones con convenio acceden a costo preferencial.</p>
+              <p>Alumnos y trabajadores de Fasti, ZERO, Universidad Filadelfia, Instituto Simón Bolívar, SNTE 32 y Seguridad Pública acceden a costo preferencial.</p>
             </div>
           </li>
         </ol>
@@ -3409,19 +3482,18 @@ main section[id] {
       <div class="container">
         <div class="section-head">
           <div class="section-head-main">
-            <p class="eyebrow" data-reveal>Lo que te llevas</p>
-            <h2 class="section-title" data-reveal>Cómo sales diferente después de entrenar aquí</h2>
+            <p class="eyebrow" data-reveal>Tu crecimiento</p>
+            <h2 class="section-title" data-reveal>Tu desarrollo y crecimiento dentro de Supremacía Marcial</h2>
           </div>
-          <p class="section-desc" data-reveal>Entras sin saber caer y sales sabiendo defenderte. Dejas de dudar de ti mismo en situaciones de presión. Te llevas disciplina que funciona fuera del tatami: en el trabajo, en la escuela, en casa.</p>
+          <p class="section-desc" data-reveal>Aprenderás a formar un carácter firme, que se verá reflejado en tu vida diaria. Cambiarás tu actitud y te transformarás en alguien más competitivo, ya que constantemente te enfrentarás a nuevas metas.</p>
         </div>
         <div class="brochures-grid" data-reveal-group>
-          <figure class="brochure-item" data-reveal="media"><img src="img/6.jpg" alt="Cómo sales diferente después de entrenar aquí" loading="lazy"></figure>
-          <figure class="brochure-item" data-reveal="media"><img src="img/7.png" alt="Lo que te llevas" loading="lazy"></figure>
+          <figure class="brochure-item" data-reveal="media"><img src="img/6.jpg" alt="Tu desarrollo y crecimiento dentro de Supremacía Marcial" loading="lazy"></figure>
         </div>
       </div>
     </section>
 <section class="parallax-banner parallax-banner--alt" data-parallax>
-      <div class="parallax-bg" style="background-image:url('img/8.png');" aria-hidden="true"></div>
+      <div class="parallax-bg" style="background-image:url('img/9.jpg');" aria-hidden="true"></div>
       <div class="parallax-overlay" aria-hidden="true"></div>
       <div class="container parallax-content">
         <p class="eyebrow" data-reveal>Nuestra forma de entrenar</p>
@@ -3435,12 +3507,12 @@ main section[id] {
             <p class="eyebrow" data-reveal>Lo que vivimos aquí</p>
             <h2 class="section-title" data-reveal>El trabajo que <span class="text-gold">forma campeones</span></h2>
           </div>
-          <p class="section-desc" data-reveal>Cada sesión, cada examen, cada competencia deja huella. Esto es lo que pasa dentro de Supremacía Marcial: disciplina real, formación auténtica y resultados que se ven.</p>
+          <p class="section-desc" data-reveal>Cada sesión, cada examen, cada competencia deja huella. Esto es lo que pasa dentro de Supremacía Marcial: disciplina real. Formamos con valores y disciplina, y los resultados se viven.</p>
         </div>
         <div class="gallery-grid" data-reveal-group>
           <figure class="gallery-item" data-reveal="media">
-            <img src="img/11.jpg" alt="Alumno ejecutando patada lateral en el dojo" loading="lazy">
-            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="0" aria-label="Ampliar imagen: Alumno ejecutando patada lateral en el dojo">
+            <img src="img/11.jpg" alt="Alumno ejecutando patada lateral en el Dochang" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="0" aria-label="Ampliar imagen: Alumno ejecutando patada lateral en el Dochang">
               <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
             </button>
           </figure>
@@ -3462,23 +3534,12 @@ main section[id] {
               <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
             </button>
           </figure>
-          <figure class="gallery-item" data-reveal="media">
-            <img src="img/15.png" alt="Competidor lanzando patada en torneo de Taekwondo" loading="lazy">
-            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="4" aria-label="Ampliar imagen: Competidor lanzando patada en torneo de Taekwondo">
-              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
-            </button>
-          </figure>
-          <figure class="gallery-item" data-reveal="media">
-            <img src="img/16.png" alt="Equipo posando con medallas tras competencia oficial" loading="lazy">
-            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="5" aria-label="Ampliar imagen: Equipo posando con medallas tras competencia oficial">
-              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
-            </button>
-          </figure>
         </div>
 
         <div class="gallery-cta" data-reveal>
           <div class="gallery-cta-text">
             <svg viewBox="0 0 24 24" class="gallery-cta-icon" aria-hidden="true"><path fill="currentColor" d="M4 5h16v2H4V5Zm0 6h16v2H4v-2Zm0 6h10v2H4v-2Z"/></svg>
+            <!-- PENDIENTE: al cliente no le convence este texto, reemplazar cuando envíe la redacción definitiva -->
             <p>Si buscas una escuela seria con maestros de respaldo internacional, este es el lugar. Conoce cómo empezar tu entrenamiento en Supremacía Marcial.</p>
           </div>
           <button type="button" class="btn btn-outline" data-wa-trigger>
@@ -3488,20 +3549,39 @@ main section[id] {
         </div>
       </div>
     </section>
+<section class="convenios" id="convenios">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <div class="section-head-main">
+            <p class="eyebrow" data-reveal>Alianzas institucionales</p>
+            <h2 class="section-title" data-reveal>Convenios</h2>
+          </div>
+          <p class="section-desc" data-reveal>Alumnos y trabajadores de estas instituciones acceden a costo preferencial.</p>
+        </div>
+        <div class="convenios-grid" data-reveal-group>
+          <div class="convenio-item" data-reveal><img src="img/16.png" alt="ZERO" loading="lazy"></div>
+          <div class="convenio-item" data-reveal><img src="img/15.png" alt="Universidad Filadelfia (UFM)" loading="lazy"></div>
+          <div class="convenio-item" data-reveal><img src="img/8.png" alt="Instituto Simón Bolívar" loading="lazy"></div>
+          <div class="convenio-item" data-reveal><img src="img/convenio-fasti.png" alt="Fasti" loading="lazy"></div>
+          <div class="convenio-item" data-reveal><img src="img/convenio-seguridad-publica.png" alt="Secretaría de Seguridad Pública, Estado de Veracruz" loading="lazy"></div>
+          <div class="convenio-item convenio-item--text" data-reveal>SNTE 32</div>
+        </div>
+      </div>
+    </section>
 <section class="contact has-bg" id="contacto">
       <div class="section-bg" style="background-image:url('img/10.jpg');" aria-hidden="true"></div>
       <div class="section-bg-veil" aria-hidden="true"></div>
       <div class="container contact-grid">
         <div class="contact-info">
           <p class="eyebrow" data-reveal>Ubicación y horarios</p>
-          <h2 class="section-title" data-reveal>Ven a conocer <span class="text-gold">el dojo</span></h2>
-          <p class="section-desc" data-reveal>Estamos en Xalapa, Veracruz. Acércate, recorre las instalaciones y habla con el maestro. La primera visita no cuesta nada y resuelve todas tus dudas.</p>
+          <h2 class="section-title" data-reveal>Ven a conocer <span class="text-gold">el Dochang</span></h2>
+          <p class="section-desc" data-reveal>Estamos en Xalapa, Veracruz, México. Acércate, recorre las instalaciones y habla con el maestro. La primera visita no cuesta nada y resuelve todas tus dudas.</p>
           <ul class="contact-list" data-reveal-group>
             <li data-reveal>
               <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
               <span class="contact-text">
                 <span class="contact-label">Ubicación</span>
-                <span>Nuestra dirección Av. Rebsamen No. 636 Local 206 Col. Mártires de Chicago. C.P.</span>
+                <span>Nuestra dirección Av. Rebsamen No. 636 Local 206 Col. Mártires de Chicago. C.P. 91097, Xalapa, Veracruz, México</span>
                 <a href="https://www.google.com/maps/search/?api=1&query=Nuestra%20direcci%C3%B3n%20%20%20Av.%20Rebsamen%20No.%20636%20Local%20206%20Col.%20M%C3%A1rtires%20de%20Chicago.%20%20C.P.%2091097%20Xalapa%2C%20Veracruz%2C%20%20M%C3%A9xico%2C%20https%3A%2F%2Fmaps.google.com%2Fmaps%2Fsearch%2FSupremac%C3%ADa%2520Marcial%2520Taekwondo%2520y%2520Hapkido%2F%4019.5093%2C-96.903%2C17z%3Fhl%3Des" target="_blank" rel="noopener" class="map-link">Ver en Google Maps</a>
               </span>
             </li>
@@ -3516,8 +3596,19 @@ main section[id] {
               <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.9-13H11v6l5.2 3.1.9-1.5-4.2-2.5Z"/></svg></span>
               <span class="contact-text">
                 <span class="contact-label">Horario</span>
-                <span>as clases son lunes, miércoles y viernes
-17:00 horas</span>
+                <span style="display:block;margin-top:4px">
+                  <img src="img/lobito.png" alt="" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;border-radius:50%;margin-right:6px"><strong>Taekwondo</strong> — Lunes y miércoles<br>
+                  17:00 preescolares (menores de 7 años) · 18:00 de 8 a 11 años<br>
+                  19:00 de 12 a 16 años · 20:15 mayores de 17 años
+                </span>
+                <span style="display:block;margin-top:10px">
+                  <img src="img/logo-supremacia-redondo.png" alt="" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;margin-right:6px"><strong>Hapkido</strong> — Viernes: 18:00 de 8 a 11 años · 19:00 de 12 a 16 años · 20:15 mayores de 17 años<br>
+                  Sábados: 09:00 horas · 10:00 a 11:30 <img src="img/7.png" alt="Kiorugui" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin:0 2px"> World Class Team Kiorugui
+                </span>
+                <span style="display:block;margin-top:10px">
+                  <strong>Kumdo</strong> — Viernes: 18:00 a 19:00 y 19:00 a 20:00 hrs<br>
+                  Sábados: 09:00 a 10:30 hrs
+                </span>
               </span>
             </li>
           </ul>
@@ -3546,10 +3637,10 @@ main section[id] {
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="#inicio" class="brand">
-          <span class="brand-mark"><img src="img/logo-lobo.png" alt="SUPREMACÍA MARCIAL TAEKKWONDO Y HAPKIDO" class="brand-logo"></span>
-          <span class="brand-text"><span class="brand-name">SUPREMACÍA MARCIAL TAEKKWONDO Y HAPKIDO</span><span class="brand-tagline">Artes marciales coreanas en Xalapa</span></span>
+          <span class="brand-mark"><img src="img/logo-lobo.png" alt="SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO" class="brand-logo"></span>
+          <span class="brand-text"><span class="brand-name">SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO</span><span class="brand-tagline">Artes marciales coreanas en Xalapa</span></span>
         </a>
-        <p>Supremacía Marcial es una escuela de Taekwondo, Hapkido y Kumdo en Xalapa, Veracruz. Formación certificada por Kukkiwon y federaciones internacionales.</p>
+        <p>Supremacía Marcial es una escuela de Taekwondo, Hapkido y Kumdo en Xalapa, Veracruz, México. Formamos con valores y disciplina.</p>
       </div>
       <div class="footer-col">
         <h4>Navegación</h4>
@@ -3557,22 +3648,14 @@ main section[id] {
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Disciplinas</a></li>
           <li><a href="#galeria">Galería</a></li>
+          <li><a href="#convenios">Convenios</a></li>
           <li><a href="#contacto">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contacto y ubicación</h4>
-        <ul>
-          <li>Nuestra dirección Av. Rebsamen No. 636 Local 206 Col. Mártires de Chicago. C.P.</li>
-          <li><a href="https://wa.me/5212288556713" target="_blank" rel="noopener">228 855 6713</a></li>
-          <li>as clases son lunes, miércoles y viernes
-17:00 horas</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>&copy; <span id="year"></span> SUPREMACÍA MARCIAL TAEKKWONDO Y HAPKIDO. Todos los derechos reservados.</p>
+        <p>&copy; <span id="year"></span> SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO. Todos los derechos reservados.</p>
         <p class="footer-bottom-tag">Artes marciales coreanas en Xalapa</p>
       </div>
     </div>
@@ -3629,7 +3712,7 @@ main section[id] {
       </div>
       <div class="lightbox-meta">
         <span class="lightbox-caption" id="lightbox-caption"></span>
-        <span class="lightbox-count"><span id="lightbox-current">1</span> / <span id="lightbox-total">6</span></span>
+        <span class="lightbox-count"><span id="lightbox-current">1</span> / <span id="lightbox-total">4</span></span>
       </div>
     </div>
   </div>

@@ -640,9 +640,6 @@ body.is-ready .hero-eyebrow::after {
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   transition: font-size 0.6s var(--ease-out);
 }
 
@@ -3239,7 +3236,7 @@ main section[id] {
       <a href="#inicio" class="brand" aria-label="SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO">
         <span class="brand-mark"><img src="img/logo-lobo.png" alt="SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO" class="brand-logo"></span>
         <span class="brand-text">
-          <span class="brand-name">SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO</span>
+          <span class="brand-name">SUPREMACÍA MARCIAL <span style="display:block">TAEKWONDO, HAPKIDO Y KUMDO</span></span>
           <span class="brand-tagline">Artes marciales coreanas en Xalapa, Veracruz, México</span>
         </span>
       </a>
@@ -3269,7 +3266,6 @@ main section[id] {
       <canvas id="particles-canvas" aria-hidden="true"></canvas>
       <div class="hero-rules" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
       <div class="container hero-inner">
-        <p class="eyebrow hero-eyebrow" data-hero="1">Certificación Kukkiwon en Xalapa, Ver.</p>
         <h1 class="hero-title">
           <span class="line" data-hero="2"><span class="line-inner gradient-text">Entrena con maestros</span></span>
           <span class="line" data-hero="3"><span class="line-inner">certificados al más alto nivel</span></span>
@@ -3290,14 +3286,6 @@ main section[id] {
           </a>
         </div>
         <div class="hero-meta" data-hero="7">
-          <div class="hero-meta-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-            <span>Xalapa, Veracruz, México</span>
-          </div>
-          <div class="hero-meta-item">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.9-13H11v6l5.2 3.1.9-1.5-4.2-2.5Z"/></svg>
-            <span>Horarios por edad y disciplina abajo</span>
-          </div>
           <div class="hero-meta-item hero-meta-item--social">
             <span class="hero-social-label">Síguenos en redes</span>
             <div class="social-links">
@@ -3308,6 +3296,10 @@ main section[id] {
               <a href="https://www.facebook.com/share/1AprGcg4C1/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
                 <span class="social-link-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></span>
                 <span class="social-link-name">Facebook</span>
+              </a>
+              <a href="https://www.tiktok.com/@supremaciamarcial" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+                <span class="social-link-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.1a6.1 6.1 0 1 0 5.3 6.1V8.4a7.5 7.5 0 0 0 4.4 1.4V6.6a4.4 4.4 0 0 1-4.4-4.6Z"/></svg></span>
+                <span class="social-link-name">TikTok</span>
               </a>
             </div>
           </div>
@@ -3371,6 +3363,7 @@ main section[id] {
               </ul>
               <div class="escudos-row" data-reveal>
                 <span class="escudo-item"><img src="img/escudo-hwarangdo.jpg" alt="World Hwarangdo Diamond Federation"></span>
+                <span class="escudo-item"><img src="img/escudo-hapkido.png" alt="World Hapkido Martial Arts Federation"></span>
               </div>
             </div>
           </article>
@@ -3391,6 +3384,10 @@ main section[id] {
                 <li data-reveal>Disciplina que desarrolla concentración y precisión</li>
                 <li data-reveal>Formación marcial integral junto a TKD y Hapkido</li>
               </ul>
+              <div class="escudos-row" data-reveal>
+                <span class="escudo-item"><img src="img/escudo-hwarangdo.jpg" alt="World Hwarangdo Diamond Federation"></span>
+                <span class="escudo-item"><img src="img/escudo-kumdo.png" alt="World Kumdo Martial Arts Federation"></span>
+              </div>
             </div>
           </article>
         </div>
@@ -3595,10 +3592,10 @@ main section[id] {
             <li data-reveal>
               <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.9-13H11v6l5.2 3.1.9-1.5-4.2-2.5Z"/></svg></span>
               <span class="contact-text">
-                <span class="contact-label">Horario</span>
+                <span class="contact-label">Horarios</span>
                 <span style="display:block;margin-top:4px">
                   <img src="img/lobito.png" alt="" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;border-radius:50%;margin-right:6px"><strong>Taekwondo</strong> — Lunes y miércoles<br>
-                  17:00 preescolares (menores de 7 años) · 18:00 de 8 a 11 años<br>
+                  17:00 preescolares (de 4 a 7 años) · 18:00 de 8 a 11 años<br>
                   19:00 de 12 a 16 años · 20:15 mayores de 17 años
                 </span>
                 <span style="display:block;margin-top:10px">
@@ -3620,6 +3617,9 @@ main section[id] {
               </a>
               <a href="https://www.facebook.com/share/1AprGcg4C1/" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
                 <span class="social-link-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></span>
+              </a>
+              <a href="https://www.tiktok.com/@supremaciamarcial" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+                <span class="social-link-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 2h-3.2v13.2a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .8.1V9.1a6.1 6.1 0 1 0 5.3 6.1V8.4a7.5 7.5 0 0 0 4.4 1.4V6.6a4.4 4.4 0 0 1-4.4-4.6Z"/></svg></span>
               </a>
             </div>
           </div>

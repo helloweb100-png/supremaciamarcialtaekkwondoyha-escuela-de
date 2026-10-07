@@ -8,7 +8,7 @@
   <meta name="keywords" content="taekwondo xalapa, hapkido xalapa, kumdo xalapa, artes marciales xalapa, kukkiwon, clases taekwondo veracruz, escuela artes marciales xalapa, supremacía marcial, taekwondo niños xalapa, hapkido veracruz">
   <meta name="author" content="SUPREMACÍA MARCIAL TAEKWONDO, HAPKIDO Y KUMDO">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#050506">
+  <meta name="theme-color" content="#252021">
   <meta property="og:title" content="Aprende Taekwondo, Hapkido y Kumdo en Xalapa con maestros certificados por Kukkiwon y federaciones internacionales. Clases para niños, jóvenes y adultos.">
   <meta property="og:description" content="Aprende Taekwondo, Hapkido y Kumdo en Xalapa con maestros certificados por Kukkiwon y federaciones internacionales. Clases para niños, jóvenes y adultos.">
   <meta property="og:type" content="website">
@@ -27,10 +27,10 @@
   --hw-texto: "Work Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   --hw-acento: "Oswald",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   /* ---- Chrome: fondo/texto de la página. Cambia con el tema. ---- */
-  --ink: #0f0d0d;
-  --ink-2: #1b1616;
-  --ink-3: #0f0d0d;
-  --panel: #1b1616;
+  --ink: #252021;
+  --ink-2: #302a2b;
+  --ink-3: #1f1b1c;
+  --panel: #302a2b;
   --paper: #f7f6f6;
   --paper-muted: #beb1b1;
   --text: #f7f6f6;
@@ -45,8 +45,8 @@
   --modal-shadow: 0 40px 110px rgba(0, 0, 0, 0.55);
 
   /* ---- Foto: hero, banners, header, loader, lightbox. Fijo, no cambia. ---- */
-  --photo-ink: #050506;
-  --photo-panel: #101012;
+  --photo-ink: #252021;
+  --photo-panel: #2e2829;
   --photo-paper: #f4efe8;
   --photo-paper-muted: #cdc4b9;
   --photo-text: #f7f3ed;
@@ -82,10 +82,10 @@
    ========================================================= */
 @media (prefers-color-scheme: light) {
   :root {
-    --ink: #0f0d0d;
-    --ink-2: #1b1616;
-    --ink-3: #0f0d0d;
-    --panel: #1b1616;
+    --ink: #252021;
+    --ink-2: #302a2b;
+    --ink-3: #1f1b1c;
+    --panel: #302a2b;
     --paper: #f7f6f6;
     --paper-muted: #beb1b1;
     --text: #f7f6f6;
@@ -354,7 +354,7 @@ body.is-ready .hero-eyebrow::after {
   z-index: 9999;
   display: grid;
   place-items: center;
-  background: #050506;
+  background: #252021;
   transform: translateY(0);
   transition: transform 1.05s var(--ease-inout) 0.15s;
   animation: loaderFailsafe 0s linear 7s forwards;
@@ -523,12 +523,12 @@ body.is-ready .hero-eyebrow::after {
   inset: 0 0 auto;
   z-index: 100;
   padding: 24px 0;
-  background: linear-gradient(180deg, rgba(5, 5, 6, 0.82), rgba(5, 5, 6, 0));
+  background: linear-gradient(180deg, rgba(37, 32, 33, 0.78), rgba(37, 32, 33, 0));
   transition: padding 0.6s var(--ease-out), background 0.5s ease, box-shadow 0.5s ease;
 }
 
 .site-header.is-scrolled {
-  background: rgba(6, 6, 8, 0.82);
+  background: rgba(37, 32, 33, 0.86);
   backdrop-filter: blur(22px) saturate(1.25);
   -webkit-backdrop-filter: blur(22px) saturate(1.25);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
@@ -783,6 +783,37 @@ body.is-ready .hero-eyebrow::after {
 .nav-open .nav-toggle span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-open .nav-toggle span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
+/* el menú pasó de 5 a 7 enlaces: en escritorio van más compactos para que
+   quepan junto a la marca; en anchos medios se oculta el botón del menú
+   (queda el del hero y el flotante de WhatsApp) en vez de aplastar la marca */
+@media (min-width: 981px) {
+  .main-nav {
+    gap: 18px;
+  }
+
+  .main-nav ul {
+    gap: 0;
+  }
+
+  .nav-link {
+    gap: 5px;
+    padding: 10px 9px;
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+  }
+
+  .nav-link::after {
+    left: 9px;
+    right: 9px;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1230px) {
+  .btn-nav {
+    display: none;
+  }
+}
+
 /* =========================================================
    BUTTONS / MICRO LABELS
    ========================================================= */
@@ -964,8 +995,8 @@ body.is-ready .hero-bg {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(ellipse 58% 50% at 50% 50%, rgba(5, 5, 6, 0.88), rgba(5, 5, 6, 0.42) 78%, transparent),
-    linear-gradient(180deg, rgba(5, 5, 6, 0.9) 0%, rgba(5, 5, 6, 0.62) 26%, rgba(5, 5, 6, 0.72) 64%, var(--ink) 100%),
+    radial-gradient(ellipse 58% 50% at 50% 50%, rgba(37, 32, 33, 0.62), rgba(37, 32, 33, 0.26) 78%, transparent),
+    linear-gradient(180deg, rgba(37, 32, 33, 0.65) 0%, rgba(37, 32, 33, 0.36) 26%, rgba(37, 32, 33, 0.45) 64%, var(--ink) 100%),
     radial-gradient(circle at 50% 38%, color-mix(in srgb, var(--red) 15%, transparent), transparent 56%);
 }
 
@@ -1239,7 +1270,7 @@ main section[id] {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(5, 5, 6, 0.9);
+  background: rgba(37, 32, 33, 0.66);
 }
 
 .has-bg::before {
@@ -1273,16 +1304,17 @@ main section[id] {
 .convenio-item {
   display: grid;
   place-items: center;
-  height: 92px;
-  padding: 14px 26px;
+  flex: 0 0 300px;
+  height: 170px;
+  padding: 16px 26px;
   border: 1px solid var(--line-2);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.92);
 }
 
 .convenio-item img {
-  max-width: 130px;
-  max-height: 60px;
+  max-width: 240px;
+  max-height: 136px;
   object-fit: contain;
 }
 
@@ -1614,7 +1646,7 @@ main section[id] {
 .parallax-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(5, 5, 6, 0.72);
+  background: rgba(37, 32, 33, 0.43);
 }
 
 .parallax-content {
@@ -1703,7 +1735,7 @@ main section[id] {
   height: 68px;
   border-radius: 50%;
   color: var(--muted);
-  background: #0a0a0d;
+  background: #2e2829;
   box-shadow: 0 0 0 1px rgba(244, 239, 232, 0.14), 0 18px 40px rgba(0, 0, 0, 0.5);
   transition: color 0.5s ease, background 0.5s ease, box-shadow 0.5s ease, transform 0.6s var(--ease-out);
 }
@@ -1761,6 +1793,10 @@ main section[id] {
   color: var(--muted);
   font-size: 0.91rem;
   line-height: 1.68;
+}
+
+.timeline-card > p:first-child {
+  margin-top: 0;
 }
 
 .why-us-cta {
@@ -1835,7 +1871,7 @@ main section[id] {
 }
 
 .gallery-item::after {
-  content: "0" counter(gitem);
+  content: counter(gitem, decimal-leading-zero);
   position: absolute;
   left: 14px;
   bottom: 12px;
@@ -1906,6 +1942,12 @@ main section[id] {
 .js [data-reveal="media"].gallery-item.is-visible:hover > img {
   transform: scale(1.06);
   filter: contrast(1.04) brightness(1.06);
+}
+
+@media (min-width: 681px) {
+  .gallery-item:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
 }
 
 .gallery-cta {
@@ -2057,6 +2099,231 @@ main section[id] {
   min-height: 540px;
   border: 0;
   filter: grayscale(1) invert(0.92) contrast(0.84);
+}
+
+/* =========================================================
+   MAESTRO
+   ========================================================= */
+.maestro {
+  background: var(--ink-2);
+}
+
+.maestro::before,
+.horarios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 0%, var(--ghost), transparent 70%),
+    radial-gradient(ellipse 50% 45% at 12% 22%, color-mix(in srgb, var(--red) 6%, transparent), transparent 70%);
+}
+
+.maestro > .container,
+.horarios > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.maestro-photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(10px, 1.2vw, 16px);
+}
+
+.maestro-photo {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line-2);
+  background: var(--panel);
+}
+
+.maestro-photo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: contrast(1.02) brightness(1.03);
+}
+
+.maestro-cv {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(32px, 5vw, 80px);
+  margin-top: clamp(48px, 6vw, 84px);
+}
+
+.maestro-cv-block + .maestro-cv-block {
+  margin-top: clamp(32px, 4vw, 52px);
+}
+
+.maestro-cv-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--paper);
+  font-family: var(--hw-display);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.maestro-cv-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line-2);
+}
+
+.maestro-cv-list {
+  display: grid;
+  gap: 2px;
+  margin-top: 16px;
+}
+
+.maestro-cv-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 9px 2px;
+  color: var(--paper-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.maestro-cv-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  margin-top: 0.62em;
+  background: var(--red);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--red) 60%, transparent);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 980px) {
+  .maestro-cv {
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 4vw, 52px);
+  }
+}
+
+@media (max-width: 680px) {
+  .maestro-photos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .maestro-photo:first-child {
+    grid-column: 1 / -1;
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* =========================================================
+   HORARIOS
+   ========================================================= */
+.horarios {
+  background: var(--ink);
+}
+
+.horarios-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 26px);
+  align-items: start;
+}
+
+.horarios-col {
+  display: grid;
+  gap: clamp(16px, 2vw, 26px);
+}
+
+.horario-card {
+  padding: clamp(22px, 2.8vw, 36px);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--wash-2));
+}
+
+.horario-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line-2);
+}
+
+.horario-logos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.horario-logos img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.horario-title {
+  font-family: var(--hw-display);
+  font-size: clamp(1.55rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.005em;
+}
+
+.horario-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.horario-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.horario-name {
+  margin: 0;
+  color: var(--paper);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.horario-desc {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.horario-when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 18px;
+  margin: 8px 0 0;
+  color: var(--paper-muted);
+  font-size: 0.93rem;
+}
+
+.horario-time {
+  color: var(--red);
+  font-family: var(--hw-acento);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 980px) {
+  .horarios-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =========================================================
@@ -2536,7 +2803,7 @@ main section[id] {
     justify-items: stretch;
     gap: 0;
     padding: 110px 28px 48px;
-    background: rgba(5, 5, 6, 0.97);
+    background: rgba(37, 32, 33, 0.97);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     opacity: 0;
@@ -2574,6 +2841,9 @@ main section[id] {
   .nav-open .main-nav li:nth-child(2) { transition-delay: 0.25s; }
   .nav-open .main-nav li:nth-child(3) { transition-delay: 0.32s; }
   .nav-open .main-nav li:nth-child(4) { transition-delay: 0.39s; }
+  .nav-open .main-nav li:nth-child(5) { transition-delay: 0.46s; }
+  .nav-open .main-nav li:nth-child(6) { transition-delay: 0.53s; }
+  .nav-open .main-nav li:nth-child(7) { transition-delay: 0.6s; }
 
   .nav-link {
     width: 100%;
@@ -2613,7 +2883,7 @@ main section[id] {
     margin-top: 34px;
     opacity: 0;
     transform: translateY(16px);
-    transition: opacity 0.5s var(--ease-out) 0.46s, transform 0.5s var(--ease-out) 0.46s;
+    transition: opacity 0.5s var(--ease-out) 0.67s, transform 0.5s var(--ease-out) 0.67s;
   }
 
   .nav-open .btn-nav {
@@ -2676,15 +2946,15 @@ main section[id] {
     grid-row: 2;
     width: 100%;
     text-align: center;
-    background: linear-gradient(180deg, rgba(16, 16, 21, 0.86), rgba(10, 10, 13, 0.82));
+    background: linear-gradient(180deg, rgba(48, 42, 43, 0.86), rgba(40, 34, 35, 0.82));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
   }
 
   .timeline-step.is-active .timeline-card {
     background: linear-gradient(180deg,
-      color-mix(in srgb, var(--red) 26%, rgba(12, 12, 16, 0.9)),
-      rgba(12, 12, 16, 0.84));
+      color-mix(in srgb, var(--red) 26%, rgba(44, 38, 39, 0.9)),
+      rgba(44, 38, 39, 0.84));
   }
 
   .contact-map,
@@ -2767,7 +3037,7 @@ main section[id] {
 
   .hero-veil {
     background:
-      linear-gradient(180deg, rgba(5, 5, 6, 0.92) 0%, rgba(5, 5, 6, 0.78) 40%, rgba(5, 5, 6, 0.9) 78%, var(--ink) 100%),
+      linear-gradient(180deg, rgba(37, 32, 33, 0.74) 0%, rgba(37, 32, 33, 0.56) 40%, rgba(37, 32, 33, 0.7) 78%, var(--ink) 100%),
       radial-gradient(ellipse at 30% 40%, color-mix(in srgb, var(--red) 20%, transparent), transparent 58%);
   }
 
@@ -2966,6 +3236,17 @@ main section[id] {
     width: 54px;
     height: 54px;
   }
+
+  .convenio-item {
+    flex-basis: calc(50% - 11px);
+    height: 120px;
+    padding: 12px 16px;
+  }
+
+  .convenio-item img {
+    max-width: 100%;
+    max-height: 90px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -2976,6 +3257,40 @@ main section[id] {
 
   .hero-title {
     font-size: clamp(2.3rem, 12vw, 3rem);
+  }
+}
+
+/* menú móvil con 7 enlaces: en pantallas bajas se compacta para que quepa
+   completo, incluido el botón (en pantallas altas queda igual que antes) */
+@media (max-width: 980px) and (max-height: 700px) {
+  .main-nav {
+    padding-top: 84px;
+    padding-bottom: 24px;
+  }
+
+  .nav-link {
+    padding-block: 11px;
+    font-size: 1.45rem;
+  }
+
+  .btn-nav {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 980px) and (max-height: 600px) {
+  .main-nav {
+    padding-top: 70px;
+    padding-bottom: 16px;
+  }
+
+  .nav-link {
+    padding-block: 7px;
+    font-size: 1.25rem;
+  }
+
+  .btn-nav {
+    margin-top: 14px;
   }
 }
 
@@ -3244,9 +3559,11 @@ main section[id] {
         <ul>
           <li><a href="#inicio" class="nav-link"><span class="nav-link-index">01</span><span class="nav-link-text">Inicio</span></a></li>
           <li><a href="#servicios" class="nav-link"><span class="nav-link-index">02</span><span class="nav-link-text">Disciplinas</span></a></li>
-          <li><a href="#galeria" class="nav-link"><span class="nav-link-index">03</span><span class="nav-link-text">Galería</span></a></li>
-          <li><a href="#convenios" class="nav-link"><span class="nav-link-index">04</span><span class="nav-link-text">Convenios</span></a></li>
-          <li><a href="#contacto" class="nav-link"><span class="nav-link-index">05</span><span class="nav-link-text">Contacto</span></a></li>
+          <li><a href="#maestro" class="nav-link"><span class="nav-link-index">03</span><span class="nav-link-text">Maestro</span></a></li>
+          <li><a href="#galeria" class="nav-link"><span class="nav-link-index">04</span><span class="nav-link-text">Galería</span></a></li>
+          <li><a href="#convenios" class="nav-link"><span class="nav-link-index">05</span><span class="nav-link-text">Convenios</span></a></li>
+          <li><a href="#horarios" class="nav-link"><span class="nav-link-index">06</span><span class="nav-link-text">Horarios</span></a></li>
+          <li><a href="#contacto" class="nav-link"><span class="nav-link-index">07</span><span class="nav-link-text">Contacto</span></a></li>
         </ul>
         <button type="button" class="btn btn-primary btn-nav" data-wa-trigger><span>Agenda tu clase gratis</span></button>
       </nav>
@@ -3312,14 +3629,14 @@ main section[id] {
         <div class="section-head">
           <div class="section-head-main">
             <p class="eyebrow" data-reveal>Disciplinas que formamos</p>
-            <h2 class="section-title" data-reveal>Lo que <span class="text-gold">entrenamos</span></h2>
+            <h2 class="section-title" data-reveal>Nuestras disciplinas marciales <span class="text-gold">deportivas</span></h2>
           </div>
         </div>
 
         <div class="service-rows">
           <article class="service-row">
             <div class="service-media" data-reveal="media">
-              <img src="img/2.png" alt="Taekwondo certificado por Kukkiwon" loading="lazy">
+              <img src="img/galeria-img-2921.jpg" alt="Taekwondo certificado por Kukkiwon" loading="lazy" style="object-position:center 55%">
             </div>
             <div class="service-body" data-reveal-group>
               <div class="service-body-head" data-reveal>
@@ -3330,10 +3647,8 @@ main section[id] {
               <p class="service-desc" data-reveal>Entrenamiento técnico y competitivo de Taekwondo dirigido por un Máster Internacional certificado por Kukkiwon. Ideal para niños, jóvenes y adultos que buscan formación marcial seria con respaldo internacional.</p>
               <ul class="service-list">
                 <li data-reveal>Certificación Kukkiwon reconocida mundialmente</li>
-                <li data-reveal>Instructor con grado 6.º Dan World Police Taekwondo Federation</li>
                 <li data-reveal>Formación técnica y competitiva en paralelo</li>
                 <li data-reveal>Clases estructuradas por nivel y edad</li>
-                <li data-reveal>Convenio con SEV en proyecto Escuelas de Vida Saludable</li>
               </ul>
               <div class="escudos-row" data-reveal>
                 <span class="escudo-item"><img src="img/escudo-kms.png" alt="Kukkiwon Membership System"></span>
@@ -3345,7 +3660,7 @@ main section[id] {
 
           <article class="service-row service-row--reverse">
             <div class="service-media" data-reveal="media">
-              <img src="img/3.png" alt="Hapkido: defensa y dominio corporal" loading="lazy">
+              <img src="img/galeria-hapkido-alumnos.jpg" alt="Hapkido: defensa y dominio corporal" loading="lazy">
             </div>
             <div class="service-body" data-reveal-group>
               <div class="service-body-head" data-reveal>
@@ -3370,7 +3685,7 @@ main section[id] {
 
           <article class="service-row">
             <div class="service-media" data-reveal="media">
-              <img src="img/4.png" alt="Kumdo: la disciplina del sable coreano" loading="lazy">
+              <img src="img/kumdo1.jpg" alt="Kumdo: la disciplina del sable coreano" loading="lazy">
             </div>
             <div class="service-body" data-reveal-group>
               <div class="service-body-head" data-reveal>
@@ -3461,8 +3776,8 @@ main section[id] {
               <svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10v2h-1v3.9l4.7 8.1A4 4 0 0 1 17.2 22H6.8a4 4 0 0 1-3.5-6L8 7.9V4H7V2Zm3 6.4L5 17a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 17l-5-8.6V4h-4v4.4Z"/></svg>
             </span>
             <div class="timeline-card">
-              <h3>Convenios con empresas e instituciones</h3>
-              <p>Alumnos y trabajadores de Fasti, ZERO, Universidad Filadelfia, Instituto Simón Bolívar, SNTE 32 y Seguridad Pública acceden a costo preferencial.</p>
+              <p>El respaldo y trayectoria de nuestra institución nos han permitido establecer vínculos de confianza con importantes instituciones educativas y empresas de Xalapa.</p>
+              <p>Gracias a esta vinculación institucional, podemos ofrecer a sus integrantes un precio preferencial en la mensualidad para formar parte de Supremacía Marcial.</p>
             </div>
           </li>
         </ol>
@@ -3472,6 +3787,63 @@ main section[id] {
             <svg viewBox="0 0 24 24" class="btn-icon" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.8a8.1 8.1 0 0 1 5.75 2.38 8.07 8.07 0 0 1 2.38 5.73c0 4.48-3.65 8.12-8.14 8.12a8.1 8.1 0 0 1-4.13-1.13l-.3-.17-3.12.82.83-3.04-.19-.31a8.06 8.06 0 0 1-1.24-4.31c0-4.48 3.65-8.09 8.16-8.09m-4.48 4.19c-.15 0-.4.06-.6.28-.21.23-.8.77-.8 1.89s.82 2.2.93 2.35c.11.15 1.6 2.5 3.95 3.44 1.94.79 2.35.63 2.77.6.42-.04 1.36-.55 1.55-1.09.19-.53.19-.99.13-1.09-.06-.09-.21-.15-.44-.26-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.52.11-.15.23-.6.75-.73.9-.13.15-.27.17-.5.06-.23-.12-.96-.35-1.83-1.13-.68-.6-1.13-1.35-1.27-1.58-.13-.23-.01-.35.1-.47.11-.11.23-.27.35-.4.11-.14.15-.24.23-.4.08-.15.04-.3-.02-.42-.06-.11-.52-1.28-.72-1.74-.19-.46-.38-.4-.52-.4Z"/></svg>
             <span>Agenda tu clase gratis</span>
           </button>
+        </div>
+      </div>
+    </section>
+<section class="maestro" id="maestro">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-main">
+            <p class="eyebrow" data-reveal>Perfil del maestro</p>
+            <h2 class="section-title" data-reveal>Conoce al <span class="text-gold">maestro</span></h2>
+          </div>
+        </div>
+
+        <div class="maestro-photos" data-reveal-group>
+          <figure class="maestro-photo" data-reveal="media"><img src="img/maestro-1.jpg" alt="El maestro en postura de Kumdo con sable" loading="lazy"></figure>
+          <figure class="maestro-photo" data-reveal="media"><img src="img/maestro-tkd.jpg" alt="El maestro ejecutando una patada alta de Taekwondo" loading="lazy"></figure>
+          <figure class="maestro-photo" data-reveal="media"><img src="img/maestro-hapkido.jpg" alt="El maestro en postura de Hapkido" loading="lazy"></figure>
+        </div>
+
+        <div class="maestro-cv">
+          <div class="maestro-cv-col">
+            <div class="maestro-cv-block" data-reveal>
+              <h3 class="maestro-cv-title">Cargos</h3>
+              <ul class="maestro-cv-list">
+                <li>Coordinador del proyecto piloto “Escuelas de Vida Saludable” de la SEV 2025/actualidad.</li>
+                <li>Delegado estatal de World Police Taekwondo Federation 2024/actualidad.</li>
+                <li>Secretario general adjunto de la World Hwarangdo Diamond Federation Mexico 2023/actualidad.</li>
+                <li>Director Estatal de World Hapkido Martial Arts Federation Hapkido &amp; Kumdo. 2019/actualidad.</li>
+              </ul>
+            </div>
+            <div class="maestro-cv-block" data-reveal>
+              <h3 class="maestro-cv-title">Trayectoria laboral</h3>
+              <ul class="maestro-cv-list">
+                <li>Maestro de arte marcial en más de 28 escuelas de los niveles preescolar a bachillerato. 1997/actualidad.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="maestro-cv-col">
+            <div class="maestro-cv-block" data-reveal>
+              <h3 class="maestro-cv-title">Formación marcial</h3>
+              <ul class="maestro-cv-list">
+                <li>Cinta Negra 6° Dan World Police Taekwondo Federation 2024.</li>
+                <li>Kukkiwon Top Ranked Master 2023.</li>
+                <li>Instructor de Hapkido, World Hapkido Martial Arts Federation 2023.</li>
+                <li>Instructor de Kumdo, World Kumdo Martial Arts Federation 2023.</li>
+                <li>Master International 2da clase certificado por Kukkiwon 2022.</li>
+                <li>Judge Qualifying International 2da clase certificado por Kukkiwon 2022.</li>
+                <li>Cinta Negra 6° Dan International certificado por Kukkiwon 2021.</li>
+              </ul>
+            </div>
+            <div class="maestro-cv-block" data-reveal>
+              <h3 class="maestro-cv-title">Otros cursos</h3>
+              <ul class="maestro-cv-list">
+                <li>Primer seminario nacional, México, World Police Taekwondo Federation 2024.</li>
+                <li>Seminario de Primeros Auxilios. Junio/2025.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -3531,6 +3903,114 @@ main section[id] {
               <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
             </button>
           </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-img-2921.jpg" alt="Alumna de Taekwondo rompiendo tablas con golpe de mano" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="4" aria-label="Ampliar imagen: Alumna de Taekwondo rompiendo tablas con golpe de mano">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-img-2924.jpg" alt="Alumna rompiendo tablas colocadas sobre dos bloques" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="5" aria-label="Ampliar imagen: Alumna rompiendo tablas colocadas sobre dos bloques">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/9.jpg" alt="Alumno rompiendo tablas con golpe de mano en el dochang" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="6" aria-label="Ampliar imagen: Alumno rompiendo tablas con golpe de mano en el dochang">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/10.jpg" alt="Alumno rompiendo tablas colocadas sobre bloques" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="7" aria-label="Ampliar imagen: Alumno rompiendo tablas colocadas sobre bloques">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-20260921-184205.jpg" alt="Alumnos practicando Taekwondo en grupo dentro del dochang" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="8" aria-label="Ampliar imagen: Alumnos practicando Taekwondo en grupo dentro del dochang">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/6.jpg" alt="Dos alumnos demostrando una técnica frente a sus compañeros" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="9" aria-label="Ampliar imagen: Dos alumnos demostrando una técnica frente a sus compañeros">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-20260911-180020.jpg" alt="Alumnos haciendo la reverencia en el tatami" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="10" aria-label="Ampliar imagen: Alumnos haciendo la reverencia en el tatami">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-20260911-180756.jpg" alt="Alumnos arrodillados en filas sobre el tatami" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="11" aria-label="Ampliar imagen: Alumnos arrodillados en filas sobre el tatami">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-20260914-195531.jpg" alt="Alumnos estirando en el tatami" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="12" aria-label="Ampliar imagen: Alumnos estirando en el tatami">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-20260921-180410.jpg" alt="Alumnos sonriendo en una foto grupal" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="13" aria-label="Ampliar imagen: Alumnos sonriendo en una foto grupal">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-cinturon.jpg" alt="Alumno ajustando su cinturón azul" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="14" aria-label="Ampliar imagen: Alumno ajustando su cinturón azul">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-demo-2026.jpg" alt="Foto grupal de alumnos y maestros al aire libre" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="15" aria-label="Ampliar imagen: Foto grupal de alumnos y maestros al aire libre">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-hapkido-alumnos.jpg" alt="Cuatro alumnos de Hapkido en guardia dentro del dochang" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="16" aria-label="Ampliar imagen: Cuatro alumnos de Hapkido en guardia dentro del dochang">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-hapkido-1.jpg" alt="Alumno en postura de Hapkido" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="17" aria-label="Ampliar imagen: Alumno en postura de Hapkido">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-hapkido-2.jpg" alt="Alumno de Hapkido con la pierna levantada" loading="lazy" style="object-position:center 12%">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="18" aria-label="Ampliar imagen: Alumno de Hapkido con la pierna levantada">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-kumdo-maestro.jpg" alt="El maestro en postura de Kumdo con dos sables" loading="lazy" style="object-position:center top">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="19" aria-label="Ampliar imagen: El maestro en postura de Kumdo con dos sables">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-kumdo-1.jpg" alt="Dos alumnos practicando Kumdo con espadas de madera" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="20" aria-label="Ampliar imagen: Dos alumnos practicando Kumdo con espadas de madera">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
+          <figure class="gallery-item" data-reveal="media">
+            <img src="img/galeria-kumdo-2.jpg" alt="Alumnos de Kumdo en guardia con sables de madera" loading="lazy">
+            <button type="button" class="gallery-trigger" data-lightbox-open data-lightbox-index="21" aria-label="Ampliar imagen: Alumnos de Kumdo en guardia con sables de madera">
+              <svg class="gallery-trigger-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg>
+            </button>
+          </figure>
         </div>
 
         <div class="gallery-cta" data-reveal>
@@ -3561,7 +4041,106 @@ main section[id] {
           <div class="convenio-item" data-reveal><img src="img/8.png" alt="Instituto Simón Bolívar" loading="lazy"></div>
           <div class="convenio-item" data-reveal><img src="img/convenio-fasti.png" alt="Fasti" loading="lazy"></div>
           <div class="convenio-item" data-reveal><img src="img/convenio-seguridad-publica.png" alt="Secretaría de Seguridad Pública, Estado de Veracruz" loading="lazy"></div>
-          <div class="convenio-item convenio-item--text" data-reveal>SNTE 32</div>
+          <div class="convenio-item" data-reveal><img src="img/convenio-snte.png" alt="SNTE 32" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+<section class="horarios" id="horarios">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <div class="section-head-main">
+            <p class="eyebrow" data-reveal>Días y horas de clase</p>
+            <h2 class="section-title" data-reveal>Horarios</h2>
+          </div>
+        </div>
+
+        <div class="horarios-grid">
+          <div class="horarios-col" data-reveal-group>
+            <article class="horario-card" data-reveal>
+              <header class="horario-head">
+                <span class="horario-logos" aria-hidden="true"><img src="img/horario-lobito.png" alt="" width="28" height="28" loading="lazy"></span>
+                <h3 class="horario-title">Pequeños Hwarang</h3>
+              </header>
+              <ul class="horario-list">
+                <li class="horario-item">
+                  <p class="horario-name">Taekwondo para peques en edad preescolar</p>
+                  <!-- NOTA: el cliente escribió "Lunes, miércoles y miércoles" (repetido); se dejó "Lunes y miércoles" como el resto de Taekwondo. Confirmar con el cliente. -->
+                  <p class="horario-when"><span class="horario-days">Lunes y miércoles</span><span class="horario-time">17:00 a 18:00 horas</span></p>
+                </li>
+              </ul>
+            </article>
+
+            <article class="horario-card" data-reveal>
+              <header class="horario-head">
+                <span class="horario-logos" aria-hidden="true"><img src="img/logo-lobo.png" alt="" width="28" height="28" loading="lazy"></span>
+                <h3 class="horario-title">Iniciación deportiva</h3>
+              </header>
+              <ul class="horario-list">
+                <li class="horario-item">
+                  <p class="horario-name">Taekwondo infantil de 8 a 11 años</p>
+                  <p class="horario-when"><span class="horario-days">Lunes y miércoles</span><span class="horario-time">18:00 a 19:00 horas</span></p>
+                </li>
+                <li class="horario-item">
+                  <p class="horario-name">Taekwondo juvenil de 12 a 16 años</p>
+                  <p class="horario-when"><span class="horario-days">Lunes y miércoles</span><span class="horario-time">19:00 a 20:00 horas</span></p>
+                </li>
+                <li class="horario-item">
+                  <p class="horario-name">Taekwondo Arte Marcial 360°</p>
+                  <p class="horario-desc">Entrena tu cuerpo. Despeja tu mente. Fortalece tu vida. Para mayores de 18 años.</p>
+                  <p class="horario-when"><span class="horario-days">Lunes y miércoles</span><span class="horario-time">20:15 a 21:15 horas</span></p>
+                </li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="horarios-col" data-reveal-group>
+            <article class="horario-card" data-reveal>
+              <header class="horario-head">
+                <span class="horario-logos" aria-hidden="true"><img src="img/horario-hapkido.png" alt="" width="28" height="28" loading="lazy"><img src="img/horario-kumdo.png" alt="" width="28" height="28" loading="lazy"></span>
+                <h3 class="horario-title">Hapkido y Kumdo</h3>
+              </header>
+              <ul class="horario-list">
+                <li class="horario-item">
+                  <p class="horario-name">Infantil de 8 a 11 años</p>
+                  <p class="horario-when"><span class="horario-days">Viernes</span><span class="horario-time">18:00 a 19:00 horas</span></p>
+                </li>
+                <li class="horario-item">
+                  <p class="horario-name">Juvenil de 12 a 16 años</p>
+                  <p class="horario-when"><span class="horario-days">Viernes</span><span class="horario-time">19:00 a 20:00 horas</span></p>
+                </li>
+                <li class="horario-item">
+                  <p class="horario-name">360°</p>
+                  <p class="horario-when"><span class="horario-days">Viernes</span><span class="horario-time">20:15 a 21:15 horas</span></p>
+                </li>
+              </ul>
+            </article>
+
+            <article class="horario-card" data-reveal>
+              <header class="horario-head">
+                <span class="horario-logos" aria-hidden="true"><img src="img/horario-hapkido.png" alt="" width="28" height="28" loading="lazy"><img src="img/horario-kumdo.png" alt="" width="28" height="28" loading="lazy"></span>
+                <h3 class="horario-title">Hapkido y Kumdo</h3>
+              </header>
+              <ul class="horario-list">
+                <li class="horario-item">
+                  <p class="horario-name">Todas las edades</p>
+                  <p class="horario-when"><span class="horario-days">Sábados</span><span class="horario-time">09:00 a 10:00 horas</span></p>
+                </li>
+              </ul>
+            </article>
+
+            <article class="horario-card" data-reveal>
+              <header class="horario-head">
+                <span class="horario-logos" aria-hidden="true"><img src="img/horario-kiorugui.png" alt="" width="28" height="28" loading="lazy"></span>
+                <h3 class="horario-title">World Class Team Kiorugui</h3>
+              </header>
+              <ul class="horario-list">
+                <li class="horario-item">
+                  <p class="horario-name">Todas las edades</p>
+                  <p class="horario-when"><span class="horario-days">Sábados</span><span class="horario-time">10:00 a 11:00 horas</span></p>
+                </li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -3570,7 +4149,7 @@ main section[id] {
       <div class="section-bg-veil" aria-hidden="true"></div>
       <div class="container contact-grid">
         <div class="contact-info">
-          <p class="eyebrow" data-reveal>Ubicación y horarios</p>
+          <p class="eyebrow" data-reveal>Ubicación</p>
           <h2 class="section-title" data-reveal>Ven a conocer <span class="text-gold">el Dochang</span></h2>
           <p class="section-desc" data-reveal>Estamos en Xalapa, Veracruz, México. Acércate, recorre las instalaciones y habla con el maestro. La primera visita no cuesta nada y resuelve todas tus dudas.</p>
           <ul class="contact-list" data-reveal-group>
@@ -3587,25 +4166,6 @@ main section[id] {
               <span class="contact-text">
                 <span class="contact-label">WhatsApp</span>
                 <a href="https://wa.me/5212288556713" target="_blank" rel="noopener">228 855 6713</a>
-              </span>
-            </li>
-            <li data-reveal>
-              <span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.9-13H11v6l5.2 3.1.9-1.5-4.2-2.5Z"/></svg></span>
-              <span class="contact-text">
-                <span class="contact-label">Horarios</span>
-                <span style="display:block;margin-top:4px">
-                  <img src="img/lobito.png" alt="" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;border-radius:50%;margin-right:6px"><strong>Taekwondo</strong> — Lunes y miércoles<br>
-                  17:00 preescolares (de 4 a 7 años) · 18:00 de 8 a 11 años<br>
-                  19:00 de 12 a 16 años · 20:15 mayores de 17 años
-                </span>
-                <span style="display:block;margin-top:10px">
-                  <img src="img/logo-supremacia-redondo.png" alt="" style="width:22px;height:22px;object-fit:contain;vertical-align:middle;margin-right:6px"><strong>Hapkido</strong> — Viernes: 18:00 de 8 a 11 años · 19:00 de 12 a 16 años · 20:15 mayores de 17 años<br>
-                  Sábados: 09:00 horas · 10:00 a 11:30 <img src="img/7.png" alt="Kiorugui" style="width:20px;height:20px;object-fit:contain;vertical-align:middle;margin:0 2px"> World Class Team Kiorugui
-                </span>
-                <span style="display:block;margin-top:10px">
-                  <strong>Kumdo</strong> — Viernes: 18:00 a 19:00 y 19:00 a 20:00 hrs<br>
-                  Sábados: 09:00 a 10:30 hrs
-                </span>
               </span>
             </li>
           </ul>
@@ -3647,8 +4207,10 @@ main section[id] {
         <ul>
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#servicios">Disciplinas</a></li>
+          <li><a href="#maestro">Maestro</a></li>
           <li><a href="#galeria">Galería</a></li>
           <li><a href="#convenios">Convenios</a></li>
+          <li><a href="#horarios">Horarios</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </div>

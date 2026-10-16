@@ -226,23 +226,6 @@
   });
   $$(".masonry > [data-reveal]").forEach((child, i) => child.style.setProperty("--d", `${(i % 4) * 90}ms`));
 
-  const easeOutExpo = (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t));
-  const runCounter = (el) => {
-    const end = Number(el.dataset.count);
-    const from = Number(el.dataset.from || 0);
-    const duration = 2200;
-    const t0 = performance.now();
-    const frame = (now) => {
-      const p = clamp((now - t0) / duration, 0, 1);
-      el.textContent = Math.round(from + (end - from) * easeOutExpo(p));
-      if (p < 1) requestAnimationFrame(frame);
-    };
-    requestAnimationFrame(frame);
-  };
-
-  const counters = $$("[data-count]");
-  if (!reduced) counters.forEach((el) => { el.textContent = el.dataset.from || "0"; });
-
   // titulares normales se revelan al entrar; el del hero (loader) y el del manifiesto (scroll) tienen su propio control
   const revealTargets = $$("[data-reveal]").concat(splitTargets.filter((t) => t.kind === "").map((t) => t.el));
   const revealIO = "IntersectionObserver" in window
@@ -259,17 +242,6 @@
     if (revealIO) revealIO.observe(el);
     else el.classList.add("is-in");
   });
-
-  if (counters.length && "IntersectionObserver" in window && !reduced) {
-    const counterIO = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        runCounter(entry.target);
-        counterIO.unobserve(entry.target);
-      });
-    }, { threshold: 0.6 });
-    counters.forEach((el) => counterIO.observe(el));
-  }
 
   /* ---------------------------------------------------------------
      06 HEADER, MENÚ MÓVIL, ENLACE ACTIVO
